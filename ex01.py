@@ -16,8 +16,8 @@ def guessing_game():
             elif user_guess == random_number:
                 print("Just right")
                 break 
-             
+
         except ValueError:
-            print("The entered data is not integer.")
+            print("The entered data is not an integer.")
 
 guessing_game() 
