@@ -7,6 +7,7 @@ def guessing_game():
         print(dedent('''\n
             1. Number
             2. Word
+            3. Quit
         \n'''))    
         user_option = int(input("Choose the game: "))
         
@@ -15,6 +16,10 @@ def guessing_game():
         
         elif user_option == 2:
             guess_word()
+
+        elif user_option == 3:
+            print("\nBye!")
+            exit(0)
         
         else:
             print("\nEnter the option correctly, please.")
