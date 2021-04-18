@@ -16,10 +16,14 @@ def word_length(*words):
 def sum_objects(*objects):
     object_tup = objects
     result = []
+    not_valid = ["*", "!", "@", "#", "$", "%", "^", "&", "|", "{", "}", ":", ";", "~", "[", "]", "/", "\\", "(", ")", "'", '''"''',"-", "_", "?", "<", ">", "+", "="]
+    
     for item in object_tup:
-        if type(item) == int or type(item) == float or (type(item) == str and not item.isalpha()):
+        if type(item) == int or type(item) == float or (type(item) == str and not item.isalpha() and not item in not_valid):
             result.append(float(item))
-    mysum(*result)
+    
+    return mysum(*result)
+
 
 print(mysum(1, 6, 219.42, .7, 9, 17, 0))
 print(mysum(*[1, 6, 219.42, .7, 9, 17.89, 0.9]))
